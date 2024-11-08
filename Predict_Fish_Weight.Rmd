@@ -108,7 +108,19 @@ The best model appears! to be the one that include L1, L2, L3, H and W. And the 
 
 ### Best Models
 
+```{r}
+which.max(summary.out$adjr2)
+```
+
+This indicates that the best model for Pike is the model with 5 variables.
+
 ### Best Two regressor model
+
+```{r}
+summary.out$which[2,]
+```
+
+we see that length 1 and length 3 are the two best regressor models, meaning they have the highest adjusted r squared value.
 
 ## Roach
 
