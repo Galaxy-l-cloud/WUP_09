@@ -120,7 +120,7 @@ This indicates that the best model for Pike is the model with 5 variables.
 summary.out$which[2,]
 ```
 
-we see that length 1 and length 3 are the two best regressor models, meaning they have the highest adjusted r squared value.
+we see that length 1 and length 3 are the two best regressor models, meaning they have the highest adjusted r squared value. Using leaps we were able to obtain the adjusted r-squared value. This gives us only the highest of adjusted r-squared values for 1, 2, 3, 4 and 5 variables for pike. 
 
 ## Roach
 
@@ -144,6 +144,20 @@ the best model is the model with 2 variables. L3 and W have the hghest adjusted 
 
 ### Best Models
 
+```{r}
+which.max(summary.out$adjr2)
+```
+
+The model with two variables is the best model based off of leaps and the highest adjusted r-squared value. The two variables in the leaps model is L3 and W.
+
+
 ### Best Two regressor model
+
+```{r}
+summary.out$which[2,]
+```
+
+Leaps tells us the model with the highest adjusted r-squared value has two variables which are L3 and W. So the best two regressor model is the model that has L3 and
+
 
 ## Final Summary Statements
