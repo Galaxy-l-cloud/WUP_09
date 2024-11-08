@@ -71,9 +71,20 @@ subsets(regsubsets.out,statistic="adjr2",legend="bottom",main="Adjusted R^2")
 This data shows us that Height and Weight are the best models. 
 
 ### Best Models
+```{r}
+which.max(summary.out$adjr2)
+```
 
+this shows that model 2 best expresses the data when we see the adjusted r squared value.
 
 ### Best Two regressor model
+
+```{r}
+summary.out$which[2,]
+```
+
+the best regressor model is model 2, this indicates that model 2 has the highest adjusted r- squared and two variables.
+
 
 
 ## Pike
