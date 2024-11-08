@@ -75,7 +75,7 @@ This data shows us that Height and Weight are the best models.
 which.max(summary.out$adjr2)
 ```
 
-this shows that model 2 best expresses the data when we see the adjusted r squared value.
+This shows that model 2 best expresses the data when we see the adjusted r squared value.
 
 ### Best Two regressor model
 
@@ -83,7 +83,7 @@ this shows that model 2 best expresses the data when we see the adjusted r squar
 summary.out$which[2,]
 ```
 
-the best regressor model is model 2, this indicates that model 2 has the highest adjusted r- squared and two variables.
+The best regressor model is model 2, this indicates that model 2 has the highest adjusted r- squared and two variables.
 
 
 ## Pike
@@ -104,7 +104,7 @@ library(car)
 subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
 ```
 
-The best model appears! to be the one that include L1, L2, L3, H and W. And the best two regressor model appears to be model 2.
+The best model appears to be the one that include L1, L2, L3, H and W, and the best two regressor model appears to be model 2.
 
 ### Best Models
 
@@ -120,7 +120,7 @@ This indicates that the best model for Pike is the model with 5 variables.
 summary.out$which[2,]
 ```
 
-we see that length 1 and length 3 are the two best regressor models, meaning they have the highest adjusted r squared value. Using leaps we were able to obtain the adjusted r-squared value. This gives us only the highest of adjusted r-squared values for 1, 2, 3, 4 and 5 variables for pike. 
+We see that length 1 and length 3 are the two best regressor models, meaning they have the highest adjusted r squared value. Using leaps we were able to obtain the adjusted r-squared value. This gives us only the highest of adjusted r-squared values for 1, 2, 3, 4 and 5 variables for pike. 
 
 ## Roach
 
@@ -140,7 +140,7 @@ library(car)
 subsets(regsubsets.out,statistic="adjr2",legend="bottomleft",main="Adjusted R^2")
 ```
 
-the best model is the model with 2 variables. L3 and W have the hghest adjusted r squared
+The best model is the model with 2 variables. L3 and W have the hghest adjusted r squared
 
 ### Best Models
 
@@ -161,3 +161,6 @@ Leaps tells us the model with the highest adjusted r-squared value has two varia
 
 
 ## Final Summary Statements
+
+We used the leaps anova to establish the best regression model for three different fish, Perch, Pike, and Roach. For every fish we were able to determine which 2 regressor models had the highest adjusted r squared value that we calculated from using the leaps anova.
+
