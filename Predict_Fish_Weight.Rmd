@@ -86,8 +86,25 @@ summary.out$which[2,]
 the best regressor model is model 2, this indicates that model 2 has the highest adjusted r- squared and two variables.
 
 
-
 ## Pike
+
+```{r}
+library(leaps)
+regsubsets.out <-
+    regsubsets(Weight ~ .,
+               data = Pike,
+               nbest = 1,       # 1 best model for each number of predictors
+               nvmax = NULL,    # NULL for no limit on number of variables
+               force.in = NULL, force.out = NULL,
+               method = "exhaustive")
+
+summary.out <- summary(regsubsets.out)
+as.data.frame(summary.out$outmat)
+library(car)
+subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
+```
+
+The best model appears! to be the one that include L1, L2, L3, H and W. And the best two regressor model appears to be model 2.
 
 ### Best Models
 
